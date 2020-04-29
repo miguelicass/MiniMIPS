@@ -32,7 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ALUControl is
-    Port ( clk_i, rst_i, en_i : in STD_LOGIC);
+    Port ( aux : in STD_LOGIC --borrar
+            );
 end ALUControl;
 
 architecture Behavioral of ALUControl is
