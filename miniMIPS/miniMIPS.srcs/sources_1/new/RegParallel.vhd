@@ -31,10 +31,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity RegParallel is
+entity RegParallel is generic (N : INTEGER );--:= 8);
     Port ( clk_i, rst_i , en_i : in STD_LOGIC;
-           byte_i : in STD_LOGIC_VECTOR(7 downto 0);
-           byte_o : out STD_LOGIC_VECTOR(7 downto 0));
+           byte_i : in STD_LOGIC_VECTOR(N-1 downto 0);
+           byte_o : out STD_LOGIC_VECTOR(N-1 downto 0));
 end RegParallel;
 
 architecture Behavioral of RegParallel is
@@ -48,7 +48,7 @@ send_register : process(clk_i,rst_i)
 begin
          if rst_i = '1' then
              --byte <= "00000000";
-             byte_o <= "00000000";
+             byte_o <= (others => '0');
          
          elsif clk_i'event and clk_i = '1' and en_i = '1' then
             --byte <= byte_i;

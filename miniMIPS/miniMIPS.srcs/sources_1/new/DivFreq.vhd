@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 29.04.2020 20:00:25
+-- Create Date: 29.04.2020 23:18:11
 -- Design Name: 
--- Module Name: ShiftL2 - Behavioral
+-- Module Name: DivFreq - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,21 +31,35 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ShiftL2 is generic (N : INTEGER );--:= 8);
-    Port ( reg_i : in STD_LOGIC_VECTOR(N-3 downto 0);
-           reg_o : out STD_LOGIC_VECTOR(N-1 downto 0));
-end ShiftL2;
+entity DivFreq is generic (N : INTEGER );--:= 4);
+    port ( clk_i : in STD_LOGIC;
+           rst_i : in STD_LOGIC;
+           freq_div_o : out STD_LOGIC);
+end DivFreq;
 
-architecture Behavioral of ShiftL2 is
+architecture Behavioral of DivFreq is
+ 
+signal counter : INTEGER := 0;
 
 begin
 
-shfit : process(reg_i)
-    
-    begin 
-    
-            reg_o <= reg_i&"00";
-            
-    end process;
+process(clk_i,rst_i) 
+    begin
+
+      if (rst_i = '1') then 
+          counter <= 0;
+          freq_div_o <= '0';
+        
+      elsif (clk_i'event and clk_i='1') then    
+        if (counter = N-1 ) then 
+            freq_div_o <= '1';
+            counter <= 0;
+        else
+            counter <= counter+1;
+            freq_div_o <= '0';
+        end if;   
+         
+     end if;
+end process;
 
 end Behavioral;
