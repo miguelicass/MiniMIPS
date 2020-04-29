@@ -51,6 +51,8 @@ end ControlFSM;
 
 architecture Behavioral of ControlFSM is
 
+--signal op : STD_LOGIC_VECTOR(5 downto 0);
+
 --var Op type
 constant J : STD_LOGIC_VECTOR(5 downto 0) := "000010";
 constant R : STD_LOGIC_VECTOR(5 downto 0) := "000000";
@@ -85,6 +87,8 @@ type state is (s_0,
 
 
 begin
+
+   --op <= op_i;
 
    outputs_state : process (current_state)
    begin

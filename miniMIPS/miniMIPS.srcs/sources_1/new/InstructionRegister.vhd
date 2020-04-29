@@ -32,9 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity InstructionResgister is
-    Port ( clk_i : in STD_LOGIC;
-           rst_i : in STD_LOGIC;
-           en_i : in STD_LOGIC);
+    Port ( clk_i, rst_i, en_i : in STD_LOGIC );
 end InstructionResgister;
 
 architecture Behavioral of InstructionResgister is
