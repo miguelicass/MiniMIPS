@@ -33,6 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity ALUControl is
     Port ( aux : in STD_LOGIC --borrar
+    
             );
 end ALUControl;
 
