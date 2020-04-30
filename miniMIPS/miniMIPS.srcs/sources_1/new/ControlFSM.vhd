@@ -51,8 +51,6 @@ end ControlFSM;
 
 architecture Behavioral of ControlFSM is
 
---signal op : STD_LOGIC_VECTOR(5 downto 0);
-
 --var Op type
 constant J : STD_LOGIC_VECTOR(5 downto 0) := "000010";
 constant R : STD_LOGIC_VECTOR(5 downto 0) := "000000";
@@ -83,30 +81,78 @@ type state is (s_0,
                s_17,
                s_18);
 
-    signal current_state : state;
+    signal current_state : state := s_0;
 
 
 begin
 
-   --op <= op_i;
-
-   outputs_state : process (current_state)
+   next_state : process(clk_i, rst_i)
    begin
+   
+       if (rst_i ='1') then current_state <= s_0;
+        
+       elsif ( clk_i'event and clk_i ='1' and en_i ='1' ) then
+            
+            case current_state is
+               
+                when s_0 => current_state <= s_1;
+    
+                when s_1 => current_state <= s_2;
+               
+                when s_2 => current_state <= s_3;
+               
+                when s_3 => current_state <= s_4;
+               
+                when s_4 => current_state <= s_5;
+               
+                when s_5 => current_state <= s_6;
+               
+                when s_6 => current_state <= s_7;
+                
+                when s_7 => current_state <= s_8;
+               
+                when s_8 => 
+    
+                   if (op_i = J) then current_state <= s_18;       
+                   elsif (op_i = R) then current_state <= s_16;       
+                   elsif (op_i = BEQ) then current_state <= s_15;          
+                   elsif (op_i = LB or op_i = SB or op_i = ADDI) then current_state <= s_9; 
+                   --else current_state <= current_state;
+                   end if;
+                
+                when s_9 => 
+    
+                   if (op_i = ADDI) then current_state <= s_14;       
+                   elsif (op_i = SB) then current_state <= s_13;     
+                   elsif (op_i = LB) then current_state <= s_10;    
+                   --else current_state <= current_state;
+                   end if;
+              
+                when s_10 => current_state <= s_11;
+             
+                when s_11 => current_state <= s_12;
+              
+                when s_12 => current_state <= s_0;
+             
+                when s_13 => current_state <= s_0;
+    
+                when s_14 => current_state <= s_0;
+    
+                when s_15 => current_state <= s_0;
+    
+                when s_16 => current_state <= s_17;
+    
+                when s_17 => current_state <= s_0;
+    
+                when s_18 => current_state <= s_0;
+           
+            end case;
+         end if;
+ end process;
 
-      pc_source_o <= "00";
-      alu_src_b_o <= "00";
-      alu_src_a_o <= '0';
-      alu_op_o <= "00";
-      reg_write_o <= '0';
-      reg_dest_o <= '0';
-      pc_write_cond_o <= '0';
-      pc_write_o <= '0';
-      i_or_d_o <= '0';
-      mem_write_o <= '0';
-      mem_data_reg_o <= '0';
-      mem_to_reg_o <= '0';
-      ir_write_o <= "0000";
 
+ outputs_state : process (current_state)
+   begin
 
       case current_state is
 
@@ -454,71 +500,5 @@ begin
 
       end case;
    end process;
-
-
-   next_state : process(clk_i, rst_i)
-   begin
-   
-   if (rst_i ='1') then current_state <= s_0;
-    
-   elsif ( clk_i'event and clk_i ='1' and en_i ='1' ) then
-        
-        case current_state is
-           
-            when s_0 => current_state <= s_1;
-
-            when s_1 => current_state <= s_2;
-           
-            when s_2 => current_state <= s_3;
-           
-            when s_3 => current_state <= s_4;
-           
-            when s_4 => current_state <= s_5;
-           
-            when s_5 => current_state <= s_6;
-           
-            when s_6 => current_state <= s_7;
-            
-            when s_7 => current_state <= s_8;
-           
-            when s_8 => 
-
-               if (op_i = J) then current_state <= s_18;       
-               elsif (op_i = R) then current_state <= s_16;       
-               elsif (op_i = BEQ) then current_state <= s_15;          
-               elsif (op_i = LB or op_i = SB or op_i = ADDI) then current_state <= s_9; 
-               --else current_state <= current_state;
-               end if;
-            
-            when s_9 => 
-
-               if (op_i = ADDI) then current_state <= s_14;       
-               elsif (op_i = SB) then current_state <= s_13;     
-               elsif (op_i = LB) then current_state <= s_10;    
-               --else current_state <= current_state;
-               end if;
-          
-            when s_10 => current_state <= s_11;
-         
-            when s_11 => current_state <= s_12;
-          
-            when s_12 => current_state <= s_0;
-         
-            when s_13 => current_state <= s_0;
-
-            when s_14 => current_state <= s_0;
-
-            when s_15 => current_state <= s_0;
-
-            when s_16 => current_state <= s_17;
-
-            when s_17 => current_state <= s_0;
-
-            when s_18 => current_state <= s_0;
-       
-        end case;
-     end if;
-end process;
-
 
 end Behavioral;

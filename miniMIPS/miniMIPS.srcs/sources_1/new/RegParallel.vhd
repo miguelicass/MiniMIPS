@@ -39,24 +39,18 @@ end RegParallel;
 
 architecture Behavioral of RegParallel is
 
---signal byte : STD_LOGIC_VECTOR (7 downto 0) := (others=> '0');
-
-
 begin
 
 send_register : process(clk_i,rst_i)
 begin
          if rst_i = '1' then
-             --byte <= "00000000";
+             --byte_o <= "00000000";
              byte_o <= (others => '0');
          
          elsif clk_i'event and clk_i = '1' and en_i = '1' then
-            --byte <= byte_i;
             byte_o <= byte_i;            
          end if;
          
     end process;
     
-    --byte_o <= byte;
-
 end Behavioral;
