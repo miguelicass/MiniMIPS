@@ -35,7 +35,7 @@ entity InstructionResgister is
     Port ( clk_i, rst_i, en_i : in STD_LOGIC;
            byte_i : in STD_LOGIC_VECTOR(3 downto 0);
            ir_write_i : in STD_LOGIC_VECTOR(3 downto 0);
-           instruction_o : out STD_LOGIC_VECTOR (3 downto 0));
+           instruction_o : out STD_LOGIC_VECTOR (31 downto 0));
            
 end InstructionResgister;
 

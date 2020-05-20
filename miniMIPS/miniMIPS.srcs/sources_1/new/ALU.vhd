@@ -35,9 +35,7 @@ entity ALU is
            alu_src_b_i : in STD_LOGIC_VECTOR (7 downto 0);
            alu_control_i : in STD_LOGIC_VECTOR (2 downto 0);
            zero_o: out STD_LOGIC;
-           result_o: out STD_LOGIC_VECTOR (7 downto 0)
-    
-            );    
+           result_o: out STD_LOGIC_VECTOR (7 downto 0));    
 end ALU;
 
 architecture Behavioral of ALU is

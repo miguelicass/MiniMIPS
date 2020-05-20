@@ -33,15 +33,15 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RegisterFile is generic (N : INTEGER; M : INTEGER ); --N = 5, M = 8
     Port ( clk_i, rst_i, en_i : in STD_LOGIC;
-           reg_write : in STD_LOGIC;
+           reg_write_i : in STD_LOGIC;
            --reg
-           address_register_1 : in STD_LOGIC_VECTOR(N-1 downto 0);
-           address_register_2 : in STD_LOGIC_VECTOR(N-1 downto 0);
-           write_register_1 : in STD_LOGIC_VECTOR(N-1 downto 0);
+           address_register_1_i : in STD_LOGIC_VECTOR(N-1 downto 0);
+           address_register_2_i : in STD_LOGIC_VECTOR(N-1 downto 0);
+           write_register_1_i : in STD_LOGIC_VECTOR(N-1 downto 0);
            --value of reg
-           read_data_1 : out STD_LOGIC_VECTOR(M-1 downto 0);
-           read_data_2 : out STD_LOGIC_VECTOR(M-1 downto 0);
-           write_data_1 : in STD_LOGIC_VECTOR(M-1 downto 0));
+           read_data_1_o : out STD_LOGIC_VECTOR(M-1 downto 0);
+           read_data_2_o : out STD_LOGIC_VECTOR(M-1 downto 0);
+           write_data_1_i : in STD_LOGIC_VECTOR(M-1 downto 0));
 
 end RegisterFile;
 
@@ -66,16 +66,16 @@ read_write : process(clk_i, rst_i) begin
       reg <= (others => (others => '0'));
         
     elsif ( clk_i'event and clk_i ='1' and en_i='1' )then
-	    case reg_write is
+	    case reg_write_i is
 	      
         --R two reg | I one reg
 	    	when '0' =>
-			    read_data_1 <= reg(to_integer(unsigned(address_register_1)));
-			    read_data_2 <= reg(to_integer(unsigned(address_register_2)));
+			    read_data_1_o <= reg(to_integer(unsigned(address_register_1_i)));
+			    read_data_2_o <= reg(to_integer(unsigned(address_register_2_i)));
 	      
         --from alu_out to write the result reg in the matrix | R => 15:11 | I => 20:16
 	    	when '1' =>
-	    		reg(to_integer(unsigned(write_register_1))) <= write_data_1;
+	    		reg(to_integer(unsigned(write_register_1_i))) <= write_data_1_i;
            
     	end case;
     end if;
