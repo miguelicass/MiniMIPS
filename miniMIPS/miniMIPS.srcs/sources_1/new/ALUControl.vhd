@@ -32,14 +32,34 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ALUControl is
-    Port ( aux : in STD_LOGIC --borrar
-    
-            );
+    Port ( alu_op_i : in STD_LOGIC_VECTOR(1 downto 0);
+           funct_i : in STD_LOGIC_VECTOR(5 downto 0);
+           alu_control_o : out STD_LOGIC_VECTOR(2 downto 0));
+           
 end ALUControl;
 
 architecture Behavioral of ALUControl is
 
 begin
+process(alu_op_i,funct_i)
 
+ begin 
+    case alu_op_i is
+    
+        when "00" => alu_control_o <= "010";
+        when "01" => alu_control_o <= "110";
+        when "10" => case funct_i is 
+    
+                when "010" => alu_control_o <= "100000";
+                when "110" => alu_control_o <= "100010";
+                when "000" => alu_control_o <= "100100";
+                when "001" => alu_control_o <= "100101";
+                when "111" => alu_control_o <= "101010";
+                    
+            end case;
+                
+    end case;
+    
+end process;
 
 end Behavioral;
