@@ -94,6 +94,7 @@ end component;
 
 component RegParallel is generic (N : INTEGER );--:= 8);
     Port ( clk_i, rst_i , en_i : in STD_LOGIC;
+           en_control_i : in STD_LOGIC;
            byte_i : in STD_LOGIC_VECTOR(N-1 downto 0);
            byte_o : out STD_LOGIC_VECTOR(N-1 downto 0));
 end component;
@@ -179,8 +180,8 @@ pc_en <= pc_write or (pc_write_cond and zero);
 
  my_PC : RegParallel generic map (N => 8 )--:= 8);
     	Port map( 
-    	   clk_i => clk_m_i, rst_i => rst_m_i, --en_i => en_m_i,
-    	   en_i => pc_en,
+    	   clk_i => clk_m_i, rst_i => rst_m_i, en_i => en_m_i,
+    	   en_control_i => pc_en,
            byte_i => multiplex6,
            byte_o => pc_byte);
 
@@ -201,8 +202,8 @@ multiplex1 <= pc_byte when i_or_d = '0' else alu_out_byte;
 
  my_Memory_Data_Register : RegParallel generic map (N => 8 )--:= 8);
     	Port map( 
-    	   clk_i => clk_m_i, rst_i => rst_m_i, --en_i => en_m_i,
-    	   en_i => mem_data_reg,
+    	   clk_i => clk_m_i, rst_i => rst_m_i, en_i => en_m_i,
+    	   en_control_i => mem_data_reg,
            byte_i => mem_data_a,
            byte_o => memory_data_register_byte);
 
@@ -234,6 +235,7 @@ multiplex3 <= instruction(20 downto 16) when reg_dest = '0' else instruction(15 
 my_A : RegParallel generic map (N => 8 )--:= 8);
     	Port map( 
     	   clk_i => clk_m_i, rst_i => rst_m_i, en_i => en_m_i,
+    	   en_control_i => '1',
            byte_i => read_data_1,
            byte_o => a_byte);
 
@@ -243,6 +245,7 @@ multiplex4 <= pc_byte when alu_src_a = '0' else a_byte;
  my_B : RegParallel generic map (N => 8 )--:= 8);
     	Port map( 
     	   clk_i => clk_m_i, rst_i => rst_m_i, en_i => en_m_i,
+    	   en_control_i => '1',
            byte_i => read_data_2,
            byte_o => b_byte);
 
@@ -270,6 +273,7 @@ with pc_source select
  my_ALUOut : RegParallel generic map (N => 8 )--:= 8);
     	Port map( 
     	   clk_i => clk_m_i, rst_i => rst_m_i, en_i => en_m_i,
+    	   en_control_i => '1',
            byte_i => result,
            byte_o => alu_out_byte);
 
