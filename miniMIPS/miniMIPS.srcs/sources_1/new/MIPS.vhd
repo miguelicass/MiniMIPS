@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity MIPS is
   Port ( clk_m_i, rst_m_i , en_m_i : in STD_LOGIC;
 --           s_aux_o : in STD_LOGIC_VECTOR(7 downto 0);
-           addr_m_i : in STD_LOGIC_VECTOR(7 downto 0);
+           data_m_i : in STD_LOGIC_VECTOR(7 downto 0);
            data_m_o : out STD_LOGIC_VECTOR(7 downto 0));
 end MIPS;
 
@@ -72,7 +72,7 @@ signal multiplex1, multiplex2, multiplex4, multiplex5, multiplex6 : STD_LOGIC_VE
 signal multiplex3 : STD_LOGIC_VECTOR(4 downto 0);
 
 --test
-signal change : STD_LOGIC_VECTOR (7 downto 0);
+signal change : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
 
 component ControlFSM is
   Port (clk_i, rst_i, en_i : in STD_LOGIC;
@@ -190,15 +190,15 @@ multiplex1 <= pc_byte when i_or_d = '0' else alu_out_byte;
  my_Memory: Memory PORT map(
 		    clka => clk_m_i,
 		    ena => en_m_i,
-		    wea => "0",--mem_write,
+		    wea(0) => mem_write,
 		    addra => multiplex1,
 		    dina => b_byte,
 		    douta => mem_data_a,
 		    clkb => clk_m_i,
-		    web => "0",--mem_write,
-		    addrb => change,
+		    web(0) => mem_write,
+		    addrb => data_m_i,
 		    dinb => change,
-		    doutb => change);
+		    doutb => data_m_o);
 
  my_Memory_Data_Register : RegParallel generic map (N => 8 )--:= 8);
     	Port map( 
@@ -252,7 +252,8 @@ multiplex4 <= pc_byte when alu_src_a = '0' else a_byte;
 --third low
 with pc_source select
 	multiplex5 <= b_byte when "00",
-	              "00000001" when "01",
+		          --"00000001"
+	              (0 => '0', others=> '1') when "01",
 	              instruction(7 downto 0) when "10",
 	              instruction(7 downto 0) when "11";
 
