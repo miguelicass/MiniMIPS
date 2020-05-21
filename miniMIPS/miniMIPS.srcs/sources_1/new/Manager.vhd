@@ -74,7 +74,8 @@ end component;
 
 begin
 
- Div_Freq_Mips : DivFreq generic map (N => 8 )--:= 4);
+                                                -- clk => 10 ns
+ Div_Freq_Mips : DivFreq generic map (N => 16 ) -- 10000000 ns = 100 Hz, N => 1000000 // simul N => 16 
     port map ( clk_i => clk_mng_i,
                rst_i => rst_mng_i,
                freq_div_o => en_mips);
@@ -86,7 +87,8 @@ begin
                data_m_i => change,
                data_m_o => data_m);
 
- Div_Freq_Display : DivFreq generic map (N => 8 )--:= 4);
+                                                        -- clk => 10 ns
+ Div_Freq_Display : DivFreq generic map (N => 2 ) -- 1000000 ns = 1000 Hz, N => 100000 // simul N => 2
     port map ( clk_i => clk_mng_i,
                rst_i => rst_mng_i,
                freq_div_o => en_display);
