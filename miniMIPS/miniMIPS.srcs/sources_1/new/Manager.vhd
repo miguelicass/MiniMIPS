@@ -87,7 +87,7 @@ begin
                data_m_i => change,
                data_m_o => data_m);
 
-                                                        -- clk => 10 ns
+                                                  -- clk => 10 ns
  Div_Freq_Display : DivFreq generic map (N => 2 ) -- 1000000 ns = 1000 Hz, N => 100000 // simul N => 2
     port map ( clk_i => clk_mng_i,
                rst_i => rst_mng_i,
