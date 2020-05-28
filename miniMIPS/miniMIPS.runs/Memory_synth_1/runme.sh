@@ -7,9 +7,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/miguelan/Escritorio/VivadoWS/Vivado/2019.2/ids_lite/ISE/bin/lin64:/home/miguelan/Escritorio/VivadoWS/Vivado/2019.2/bin
+  PATH=/opt/Xilinx/Vivado/2019.2/ids_lite/ISE/bin/lin64:/opt/Xilinx/Vivado/2019.2/bin
 else
-  PATH=/home/miguelan/Escritorio/VivadoWS/Vivado/2019.2/ids_lite/ISE/bin/lin64:/home/miguelan/Escritorio/VivadoWS/Vivado/2019.2/bin:$PATH
+  PATH=/opt/Xilinx/Vivado/2019.2/ids_lite/ISE/bin/lin64:/opt/Xilinx/Vivado/2019.2/bin:$PATH
 fi
 export PATH
 
@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.runs/Memory_synth_1'
+HD_PWD='/home/users/alu07/MiniMIPS/miniMIPS/miniMIPS.runs/Memory_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

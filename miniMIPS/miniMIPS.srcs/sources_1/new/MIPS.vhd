@@ -40,8 +40,6 @@ end MIPS;
 
 architecture Behavioral of MIPS is
 
-
-
 --control signals
 signal op : STD_LOGIC_VECTOR(5 downto 0);
 signal ir_write :STD_LOGIC_VECTOR(3 downto 0);
