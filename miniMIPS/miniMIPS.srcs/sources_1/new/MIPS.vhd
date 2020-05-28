@@ -188,17 +188,17 @@ pc_en <= pc_write or (pc_write_cond and zero);
 multiplex1 <= pc_byte when i_or_d = '0' else alu_out_byte;
 
  my_Memory: Memory PORT map(
-		    clka => clk_m_i,
-		    ena => en_m_i,
-		    wea(0) => mem_write,
-		    addra => multiplex1,
-		    dina => b_byte,
-		    douta => mem_data_a,
-		    clkb => clk_m_i,
-		    web(0) => mem_write,
-		    addrb => data_m_i,
-		    dinb => change,
-		    doutb => data_m_o);
+		    clka => clk_m_i,      --clk 1
+		    ena => en_m_i,        --enable
+		    wea(0) => mem_write,  --MemWrite 1
+		    addra => multiplex1,  --AdressA
+		    dina => b_byte,       --WriteDataA
+		    douta => mem_data_a,  --MemDataA
+		    clkb => clk_m_i,      --clk 2
+		    web(0) => mem_write,  --MemWrite 2
+		    addrb => data_m_i,    --AdressB
+		    dinb => change,       --WriteDAtaB//MemDataB??
+		    doutb => data_m_o);   --MemDataB
 
  my_Memory_Data_Register : RegParallel generic map (N => 8 )--:= 8);
     	Port map( 
