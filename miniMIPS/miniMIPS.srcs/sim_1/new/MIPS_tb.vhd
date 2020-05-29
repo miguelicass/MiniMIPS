@@ -43,22 +43,34 @@ component MIPS is
            data_m_o : out STD_LOGIC_VECTOR(7 downto 0));
 end component;
 
-signal clk_m, rst_m, en_m : STD_LOGIC := '0';
+signal clk, rst, en : STD_LOGIC := '0';
 signal data_m_in : STD_LOGIC_VECTOR(7 downto 0);
 signal data_m_out : STD_LOGIC_VECTOR(7 downto 0):= (others=>'0');
 
 begin
 
-    clk_m <= not clk_m after 10 ns;
+    clk <= not clk after 10 ns;
     
-    en_m <= '1'; -- para la simul
+    en <= '1'; -- para la simul
     
     mini_mips : MIPS port map (
-                    clk_m_i => clk_m,
-                    rst_m_i => rst_m,
-                    en_m_i => en_m,
+                    clk_m_i => clk,
+                    rst_m_i => rst,
+                    en_m_i => en,
                     data_m_i => data_m_in,
                     data_m_o => data_m_out);
     
+     process
+        begin
+        
+        data_m_in <= "11111001";
+        
+        rst <= '1';
+        
+        wait for 10 ns;
+        
+        rst <= '0';
+        
+    end process;
         
 end Behavioral;

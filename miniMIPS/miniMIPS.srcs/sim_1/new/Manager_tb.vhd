@@ -44,29 +44,29 @@ component Manager is
            display_mng_o : out STD_LOGIC_VECTOR(7 downto 0));
  end component;
 
-signal clk_mng, rst_mng: STD_LOGIC := '0';
+signal clk, rst: STD_LOGIC := '0';
 signal en_display_mng : STD_LOGIC_VECTOR(7 downto 0):= (others=>'0');
 signal display_mng : STD_LOGIC_VECTOR(7 downto 0):= (others=>'0');
 
 
 begin
 
-    clk_mng <= not clk_mng after 10 ns;
+    clk <= not clk after 10 ns;
     
     final_component : Manager port map (
-                        clk_mng_i => clk_mng,
-                        rst_mng_i => rst_mng,
+                        clk_mng_i => clk,
+                        rst_mng_i => rst,
                         en_display_mng_o => en_display_mng,
                         display_mng_o => display_mng);
 
     process
         begin
         
-        --rst_mng <= '1';
+        rst <= '1';
         
-       -- wait for 10 ns;
+        wait for 10 ns;
         
-       -- rst_mng <= '0';
+        rst <= '0';
         
     end process;
     

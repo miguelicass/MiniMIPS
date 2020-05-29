@@ -1,4 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Manager.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Manager'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sim_1/new/Manager_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Manager_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sim_1/new/ControlFSM_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ControlFSM_tb'
