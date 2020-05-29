@@ -70,7 +70,7 @@ signal multiplex1, multiplex2, multiplex4, multiplex5, multiplex6 : STD_LOGIC_VE
 signal multiplex3 : STD_LOGIC_VECTOR(4 downto 0);
 
 --test
-signal change : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
+signal nonresult : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
 
 component ControlFSM is
   Port (clk_i, rst_i, en_i : in STD_LOGIC;
@@ -193,9 +193,9 @@ multiplex1 <= pc_byte when i_or_d = '0' else alu_out_byte;
 		    dina => b_byte,       --WriteDataA
 		    douta => mem_data_a,  --MemDataA
 		    clkb => clk_m_i,      --clk 2
-		    web(0) => mem_write,  --MemWrite 2
+		    web(0) => '0',        --MemWrite 2
 		    addrb => data_m_i,    --AdressB
-		    dinb => change,       --WriteDAtaB//MemDataB??
+		    dinb => nonresult,    --WriteDAtaB//MemDataB??
 		    doutb => data_m_o);   --MemDataB
 
  my_Memory_Data_Register : RegParallel generic map (N => 8 )--:= 8);
