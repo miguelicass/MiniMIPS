@@ -119,6 +119,8 @@ led_number:process(led)
                    when "01111111" =>
                     led <= byte_i(3 downto 0);
        
+                   when others => null;
+                   
                end case;
        
            end process; 

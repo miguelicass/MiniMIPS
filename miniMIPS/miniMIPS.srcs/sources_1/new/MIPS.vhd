@@ -253,7 +253,9 @@ with pc_source select
 		          --"00000001"
 	              (0 => '0', others=> '1') when "01",
 	              instruction(7 downto 0) when "10",
-	              instruction(7 downto 0) when "11";
+	              instruction(7 downto 0) when "11",
+	              (others=> '0') when others;
+	              
 
  my_ALU_Control : ALUControl Port map( 
  		   alu_op_i => alu_op,
@@ -262,8 +264,8 @@ with pc_source select
 
 
  my_ALU : ALU Port map( 
- 		   alu_src_a_i => multiplex3,
-           alu_src_b_i => multiplex4,
+ 		   alu_src_a_i => multiplex4,
+           alu_src_b_i => multiplex5,
            alu_control_i => alu_control,
            zero_o=> zero,
            result_o=> result);    
@@ -286,8 +288,8 @@ with pc_source select
 with pc_source select
 	multiplex6 <= result when "00",
 	              alu_out_byte when "01",
-	              reg_desp when "10";
-
+	              reg_desp when "10",
+                  (others => '0') when others;
 
 
 end Behavioral;

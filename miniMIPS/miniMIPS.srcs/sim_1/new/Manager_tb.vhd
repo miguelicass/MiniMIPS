@@ -62,11 +62,11 @@ begin
     process
         begin
         
-        rst_mng <= '1';
+        --rst_mng <= '1';
         
-        wait for 10 ns;
+       -- wait for 10 ns;
         
-        rst_mng <= '0';
+       -- rst_mng <= '0';
         
     end process;
     

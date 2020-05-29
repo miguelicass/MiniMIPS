@@ -52,27 +52,31 @@ process(alu_op_i,funct_i)
         when "01" => 
             alu_control_o <= "110";
             
-        when "10" => case funct_i is 
+        when "10" => 
+            
+            case funct_i is 
     
-                when "010" => 
-                    alu_control_o <= "100000";
+                when "100000" => 
+                    alu_control_o <= "010";
                     
-                when "110" => 
-                    alu_control_o <= "100010";
+                when "100010" => 
+                    alu_control_o <= "110";
                     
-                when "000" => 
-                    alu_control_o <= "100100";
+                when "100100" => 
+                    alu_control_o <= "000";
                     
-                when "001" => 
-                    alu_control_o <= "100101";
+                when "100101" => 
+                    alu_control_o <= "001";
                 
-                when "111" => 
-                    alu_control_o <= "101010";
+                when "101010" => 
+                    alu_control_o <= "111";
                     
                 when others => null;
                 
             end case;
-                
+         
+        when others => null;
+        
     end case;
     
 end process;

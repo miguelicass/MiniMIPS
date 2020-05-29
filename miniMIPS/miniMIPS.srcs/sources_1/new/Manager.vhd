@@ -113,7 +113,7 @@ begin
         if rst_mng_i = '1' then
             current_state <= number_248;
 
-        elsif clk_mng_i'event and clk_mng_i = '1' and en_display = '1' then
+        elsif clk_mng_i'event and clk_mng_i = '1'  then --en_display = '1'
 
             case current_state is
 

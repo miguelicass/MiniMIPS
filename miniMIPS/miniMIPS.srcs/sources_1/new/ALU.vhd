@@ -52,7 +52,8 @@ with alu_control_i select
                     STD_LOGIC_VECTOR(unsigned(alu_src_a_i) - unsigned(alu_src_b_i)) when "110",
                     alu_src_a_i and alu_src_b_i when "000",
                     alu_src_a_i or alu_src_b_i when "001",  
-                    SLT when "111";
+                    SLT when "111",
+                    (others => '0') when others;
 
 with result select
     zero_o <= '1' when "00000000",

@@ -4,5 +4,33 @@ Running: /home/miguelan/Escritorio/VivadoWS/Vivado/2019.2/bin/unwrapped/lnx64.o/
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-2335] case statement does not cover all choices. 'others' clause is needed [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/InstructionRegister.vhd:56]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.DivFreq [\DivFreq(n=16)\]
+Compiling architecture behavioral of entity xil_defaultlib.ControlFSM [controlfsm_default]
+Compiling architecture behavioral of entity xil_defaultlib.RegParallel [\RegParallel(n=8)\]
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_output_stage(...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="art...
+Compiling module xil_defaultlib.Memory
+Compiling architecture behavioral of entity xil_defaultlib.InstructionResgister [instructionresgister_default]
+Compiling architecture behavioral of entity xil_defaultlib.RegisterFile [\RegisterFile(n=5,m=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.ALUControl [alucontrol_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture behavioral of entity xil_defaultlib.ShiftL2 [\ShiftL2(n=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.MIPS [mips_default]
+Compiling architecture behavioral of entity xil_defaultlib.DivFreq [\DivFreq(n=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.Display7_Segmentos [\Display7_Segmentos(n=8)\]
+Compiling architecture behavioral of entity xil_defaultlib.Manager [manager_default]
+Compiling architecture behavioral of entity xil_defaultlib.manager_tb
+Built simulation snapshot Manager_tb_behav
