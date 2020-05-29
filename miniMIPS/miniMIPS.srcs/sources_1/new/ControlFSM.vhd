@@ -145,6 +145,8 @@ begin
                 when s_17 => current_state <= s_0;
     
                 when s_18 => current_state <= s_0;
+                
+                when others => current_state <= s_0;
            
             end case;
          end if;
@@ -481,21 +483,21 @@ begin
             --ir_write_o <= "0000";
    
 
---          when others =>  
+          when others =>  
 
---            pc_source_o <= "00";
---            alu_src_b_o <= "00";
---            alu_src_a_o <= '0';
---            alu_op_o <= "00";
---            reg_write_o <= '0';
---            reg_dest_o <= '0';
---            pc_write_cond_o <= '0';
---            pc_write_o <= '0';
---            i_or_d_o <= '0';
---            mem_write_o <= '0';
---            mem_data_reg_o <= '0';
---            mem_to_reg_o <= '0';
---            ir_write_o <= "0000";
+            pc_source_o <= "00";
+            alu_src_b_o <= "00";
+            alu_src_a_o <= '0';
+            alu_op_o <= "00";
+            reg_write_o <= '0';
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
+            pc_write_o <= '0';
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
+            ir_write_o <= "0000";
 
 
       end case;

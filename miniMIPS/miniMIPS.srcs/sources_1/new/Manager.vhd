@@ -117,30 +117,23 @@ begin
 
             case current_state is
 
-                when number_248 =>
-                        current_state <= number_249;
+                when number_248 => current_state <= number_249;
 
-                when number_249 =>
-                    current_state <= number_250;
+                when number_249 => current_state <= number_250;
                     
-                when number_250 =>
-                    current_state <= number_251;
+                when number_250 => current_state <= number_251;
 
-                when number_251 =>
-                    current_state <= number_252;
+                when number_251 => current_state <= number_252;
                     
-               when number_252 =>
-                    current_state <= number_253;
+                when number_252 => current_state <= number_253;
 
-                when number_253 =>
-                    current_state <= number_254;
+                when number_253 => current_state <= number_254;
 
-                when number_254 =>
-                    current_state <= number_255;
+                when number_254 => current_state <= number_255;
 
-                when number_255 =>
-                    current_state <= number_249;
-
+                when number_255 => current_state <= number_249;
+                
+                when others => current_state <= number_249;
 
             end case;
 
@@ -175,6 +168,8 @@ begin
 
                 when number_255 =>
                     data_m_in <= "11111111";
+                    
+                when others => null;
                 
         end case;
 

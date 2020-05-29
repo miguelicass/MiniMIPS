@@ -46,16 +46,31 @@ process(alu_op_i,funct_i)
  begin 
     case alu_op_i is
     
-        when "00" => alu_control_o <= "010";
-        when "01" => alu_control_o <= "110";
+        when "00" => 
+            alu_control_o <= "010";
+            
+        when "01" => 
+            alu_control_o <= "110";
+            
         when "10" => case funct_i is 
     
-                when "010" => alu_control_o <= "100000";
-                when "110" => alu_control_o <= "100010";
-                when "000" => alu_control_o <= "100100";
-                when "001" => alu_control_o <= "100101";
-                when "111" => alu_control_o <= "101010";
+                when "010" => 
+                    alu_control_o <= "100000";
                     
+                when "110" => 
+                    alu_control_o <= "100010";
+                    
+                when "000" => 
+                    alu_control_o <= "100100";
+                    
+                when "001" => 
+                    alu_control_o <= "100101";
+                
+                when "111" => 
+                    alu_control_o <= "101010";
+                    
+                when others => null;
+                
             end case;
                 
     end case;

@@ -70,7 +70,7 @@ signal multiplex1, multiplex2, multiplex4, multiplex5, multiplex6 : STD_LOGIC_VE
 signal multiplex3 : STD_LOGIC_VECTOR(4 downto 0);
 
 --test
-signal nonresult : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
+constant nonresult : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
 
 component ControlFSM is
   Port (clk_i, rst_i, en_i : in STD_LOGIC;
@@ -115,7 +115,7 @@ END COMPONENT;
 
 component InstructionResgister is
     Port ( clk_i, rst_i, en_i : in STD_LOGIC;
-           byte_i : in STD_LOGIC_VECTOR(3 downto 0);
+           byte_i : in STD_LOGIC_VECTOR(7 downto 0);
            ir_write_i : in STD_LOGIC_VECTOR(3 downto 0);
            instruction_o : out STD_LOGIC_VECTOR (31 downto 0));
 end component;

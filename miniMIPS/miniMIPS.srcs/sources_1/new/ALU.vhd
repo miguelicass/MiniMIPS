@@ -48,7 +48,7 @@ SLT <= "00000001" when alu_src_a_i < alu_src_b_i else "00000000";
 
 with alu_control_i select 
 
-        result <=   STD_LOGIC_VECTOR(unsigned(alu_src_a_i) + unsigned(alu_src_b_i)) when "010",
+          result <= STD_LOGIC_VECTOR(unsigned(alu_src_a_i) + unsigned(alu_src_b_i)) when "010",
                     STD_LOGIC_VECTOR(unsigned(alu_src_a_i) - unsigned(alu_src_b_i)) when "110",
                     alu_src_a_i and alu_src_b_i when "000",
                     alu_src_a_i or alu_src_b_i when "001",  

@@ -76,6 +76,8 @@ read_write : process(clk_i, rst_i) begin
         --from alu_out to write the result reg in the matrix | R => 15:11 | I => 20:16
 	    	when '1' =>
 	    		reg(to_integer(unsigned(write_register_1_i))) <= write_data_1_i;
+	    		
+	    	when others => null;
            
     	end case;
     end if;
