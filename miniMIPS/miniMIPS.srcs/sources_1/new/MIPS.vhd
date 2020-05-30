@@ -41,7 +41,7 @@ end MIPS;
 architecture Behavioral of MIPS is
 
 --control signals
-signal op : STD_LOGIC_VECTOR(5 downto 0);
+--signal op : STD_LOGIC_VECTOR(5 downto 0);
 signal ir_write :STD_LOGIC_VECTOR(3 downto 0);
 signal pc_source, alu_src_b, alu_op : STD_LOGIC_VECTOR(1 downto 0);
 signal alu_src_a, reg_write, reg_dest, pc_write_cond, pc_write, i_or_d, mem_write, mem_data_reg, mem_to_reg : STD_LOGIC;
@@ -159,7 +159,7 @@ begin
 
 my_Control_FSM : ControlFSM Port map ( 
 			clk_i => clk_m_i, rst_i => rst_m_i, en_i => en_m_i,
-        	op_i => op,
+        	op_i => instruction(31 downto 26),
         	pc_source_o => pc_source,
         	alu_src_b_o => alu_src_b,
         	alu_src_a_o => alu_src_a,
