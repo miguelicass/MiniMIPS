@@ -247,14 +247,20 @@ multiplex4 <= pc_byte when alu_src_a = '0' else a_byte;
            byte_i => read_data_2,
            byte_o => b_byte);
 
+----third low
+--with alu_src_b select
+--	multiplex5 <= b_byte when "00",
+--		          --"00000001"
+--	              (0 => '1', others=> '0') when "01",
+--	              instruction(7 downto 0) when "10",
+--	              instruction(7 downto 0) when "11",
+--	              (others=> '0') when others;
+
 --third low
-with pc_source select
-	multiplex5 <= b_byte when "00",
-		          --"00000001"
-	              (0 => '0', others=> '1') when "01",
-	              instruction(7 downto 0) when "10",
-	              instruction(7 downto 0) when "11",
-	              (others=> '0') when others;
+ multiplex5 <= b_byte when (alu_src_b = "00") else
+               (0 => '1', others=> '0') when (alu_src_b = "01") else
+               instruction(7 downto 0) when (alu_src_b = "10") else
+               instruction(7 downto 0) when (alu_src_b = "11") ;
 	              
 
  my_ALU_Control : ALUControl Port map( 
@@ -285,11 +291,30 @@ with pc_source select
            reg_o => reg_desp);
 
 --multiplex6
-with pc_source select
-	multiplex6 <= result when "00",
-	              alu_out_byte when "01",
-	              reg_desp when "10",
-                  (others => '0') when others;
+--with pc_source select
+--	multiplex6 <= result when "00",
+--	              alu_out_byte when "01",
+--	              reg_desp when "10",
+--                  (others => '0') when others;
+                  
+   multiplex6 <= result when (pc_source = "00") else
+                   alu_out_byte when (pc_source = "01") else
+                   reg_desp when (pc_source = "10") ;
+                  
+----multiplex6
+--case pc_source is
+    
+--    when "00" => 
+--        multiplex6 <= result
+        
+--     when "01" => 
+--        multiplex6 <= alu_out_byte
+        
+--     when "10" => 
+--        multiplex6 <= reg_desp
+        
+--     when others => null;
 
+--	end case;
 
 end Behavioral;

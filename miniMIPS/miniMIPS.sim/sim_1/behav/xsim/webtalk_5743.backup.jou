@@ -2,11 +2,11 @@
 # Webtalk v2019.2.1 (64-bit)
 # SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
 # IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
-# Start of session at: Sat May 30 14:06:48 2020
-# Process ID: 17578
+# Start of session at: Sat May 30 17:56:38 2020
+# Process ID: 5743
 # Current directory: /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.sim/sim_1/behav/xsim
-# Command line: wbtcv -mode batch -source /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.sim/sim_1/behav/xsim/xsim.dir/ALU_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv -mode batch -source /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.sim/sim_1/behav/xsim/xsim.dir/RegisterFile_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.sim/sim_1/behav/xsim/xsim.dir/ALU_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+source /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.sim/sim_1/behav/xsim/xsim.dir/RegisterFile_tb_behav/webtalk/xsim_webtalk.tcl -notrace

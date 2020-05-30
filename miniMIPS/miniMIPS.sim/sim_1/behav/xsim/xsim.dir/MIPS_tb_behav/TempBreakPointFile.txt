@@ -1,1 +1,2 @@
 Breakpoint File Version 1.0
+53 true /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sim_1/new/MIPS_tb.vhd

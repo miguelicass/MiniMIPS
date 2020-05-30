@@ -19,7 +19,7 @@ Dec  5 2019
 /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Display7_Segmentos.vhd,1590778269,vhdl,,,,display7_segmentos,,,,,,,,
 /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/DivFreq.vhd,1590706599,vhdl,,,,divfreq,,,,,,,,
 /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/InstructionRegister.vhd,1590774812,vhdl,,,,instructionresgister,,,,,,,,
-/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd,1590789843,vhdl,,,,mips,,,,,,,,
+/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd,1590860888,vhdl,,,,mips,,,,,,,,
 /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Manager.vhd,1590778800,vhdl,,,,manager,,,,,,,,
 /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd,1590835067,vhdl,,,,regparallel,,,,,,,,
 /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd,1590856080,vhdl,,,,registerfile,,,,,,,,
