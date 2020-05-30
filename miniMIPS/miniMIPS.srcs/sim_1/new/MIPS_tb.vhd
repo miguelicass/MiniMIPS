@@ -43,6 +43,7 @@ component MIPS is
            data_m_o : out STD_LOGIC_VECTOR(7 downto 0));
 end component;
 
+--signals
 signal clk, rst, en : STD_LOGIC := '0';
 signal data_m_in : STD_LOGIC_VECTOR(7 downto 0);
 signal data_m_out : STD_LOGIC_VECTOR(7 downto 0):= (others=>'0');
@@ -50,7 +51,7 @@ signal data_m_out : STD_LOGIC_VECTOR(7 downto 0):= (others=>'0');
 begin
 
     clk <= not clk after 5 ns;
-    
+    --en <= not en after 10 ns;
     en <= '1'; -- para la simul
     
     mini_mips : MIPS port map (

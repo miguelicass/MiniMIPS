@@ -1,0 +1,12 @@
+
+{ 
+    crc :  3700271932999398862  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto ca313ae86a69404cadb29348d52a655f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip -L xpm --snapshot InstructionRegister_tb_behav xil_defaultlib.InstructionRegister_tb" , 
+    buildDate : "Dec  5 2019" , 
+    buildTime : "04:51:02" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/InstructionRegister_tb_behav/xsimk\"   \"xsim.dir/InstructionRegister_tb_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/InstructionRegister_tb_behav/obj/xsim_1.lnx64.o\" -L\"/home/miguelan/Escritorio/VivadoWS/Vivado/2019.2/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

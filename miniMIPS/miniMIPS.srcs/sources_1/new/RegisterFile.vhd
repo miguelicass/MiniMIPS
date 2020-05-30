@@ -64,16 +64,20 @@ read_write : process(clk_i, rst_i) begin
       --for i in 0 to N-1
       --reg(i) <= (others => '0');
       reg <= (others => (others => '0'));
+      read_data_1_o <= (others => '0');
+	  read_data_2_o <= (others => '0');
+	      
+      
         
     elsif ( clk_i'event and clk_i ='1' and en_i='1' )then
 	    case reg_write_i is
 	      
-        --R two reg | I one reg
+        --to read => R two reg | I one reg
 	    	when '0' =>
 			    read_data_1_o <= reg(to_integer(unsigned(address_register_1_i)));
 			    read_data_2_o <= reg(to_integer(unsigned(address_register_2_i)));
 	      
-        --from alu_out to write the result reg in the matrix | R => 15:11 | I => 20:16
+        --to write => the result reg in the matrix, from alu_out | R => 15:11 | I => 20:16
 	    	when '1' =>
 	    		reg(to_integer(unsigned(write_register_1_i))) <= write_data_1_i;
 	    		

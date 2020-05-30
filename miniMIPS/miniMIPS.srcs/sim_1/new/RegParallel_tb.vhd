@@ -58,7 +58,7 @@ constant clk_period : time := 1 ns;
 
 BEGIN
 
-   uut: RegParallel generic map (N => 8 )
+   my_Reg_Parallel: RegParallel generic map (N => 8 )
     PORT MAP (
         clk_i => clk,
         en_i => en ,
@@ -74,7 +74,7 @@ BEGIN
    en_control <= '1';
    --en_control <= not en_control after 20 ns;
    
-   stim_proc: process
+   process
    begin 
    
    rst <= '1';

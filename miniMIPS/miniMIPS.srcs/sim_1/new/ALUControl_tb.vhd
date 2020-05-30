@@ -54,12 +54,12 @@ Port ( alu_op_i : in STD_LOGIC_VECTOR(1 downto 0);
 begin
   
  -- Instantiate the Unit Under Test (UUT)
- uut: ALUControl PORT MAP (
+ my_ALU_Control: ALUControl PORT MAP (
  alu_op_i => alu_op,
  funct_i => funct,
  alu_control_o => alu_control);
  
- stim_proc: process
+ process
  begin
  
  --wait for 10 ns;
