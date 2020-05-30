@@ -113,7 +113,7 @@ begin
         if rst_mng_i = '1' then
             current_state <= number_248;
 
-        elsif clk_mng_i'event and clk_mng_i = '1'  then --en_display = '1'
+        elsif clk_mng_i'event and clk_mng_i = '1'  and en_display = '1' then
 
             case current_state is
 
@@ -131,7 +131,7 @@ begin
 
                 when number_254 => current_state <= number_255;
 
-                when number_255 => current_state <= number_249;
+                when number_255 => current_state <= number_248;
                 
                 when others => current_state <= number_249;
 
