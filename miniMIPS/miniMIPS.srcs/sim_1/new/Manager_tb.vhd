@@ -51,7 +51,7 @@ signal display_mng : STD_LOGIC_VECTOR(7 downto 0):= (others=>'0');
 
 begin
 
-    clk <= not clk after 10 ns;
+    clk <= not clk after 5 ns;
     
     final_component : Manager port map (
                         clk_mng_i => clk,
@@ -67,7 +67,8 @@ begin
         wait for 10 ns;
         
         rst <= '0';
-        
+      
+      wait;  
     end process;
     
 end Behavioral;

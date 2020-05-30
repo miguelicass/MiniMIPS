@@ -112,19 +112,19 @@ my_Control_FSM : ControlFSM Port map (
     wait for 100 ns;
     
     op <= R;
-    wait for 100 ns;
+    wait for 120 ns;
     
     op <= BEQ;
-    wait for 100 ns;
+    wait for 120 ns;
     
     op <= LB;
-    wait for 100 ns;
+    wait for 200 ns;
     
     op <= SB;
-    wait for 100 ns;
+    wait for 150 ns;
     
     op <= ADDI;
-    wait for 100 ns;
+    wait for 120 ns;
     
     wait;
   end process;

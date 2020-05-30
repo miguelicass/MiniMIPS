@@ -49,7 +49,7 @@ signal data_m_out : STD_LOGIC_VECTOR(7 downto 0):= (others=>'0');
 
 begin
 
-    clk <= not clk after 10 ns;
+    clk <= not clk after 5 ns;
     
     en <= '1'; -- para la simul
     
@@ -71,6 +71,7 @@ begin
         
         rst <= '0';
         
+        wait;
     end process;
         
 end Behavioral;

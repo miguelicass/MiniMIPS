@@ -158,7 +158,7 @@ begin
 
       case current_state is
 
-          when s_0 =>
+                    when s_0 =>
 
             pc_source_o <= "00";
             alu_src_b_o <= "00";
@@ -177,18 +177,18 @@ begin
 
          when s_1 =>
           
-            --pc_source_o <= "00";
+            pc_source_o <= "00";
             alu_src_b_o <= "01";
-            --alu_src_a_o <= '0';
-            --alu_op_o <= "00";
-            --reg_write_o <= '0';
-            --reg_dest_o <= '0';
-            --pc_write_cond_o <= '0';
+            alu_src_a_o <= '0';
+            alu_op_o <= "00";
+            reg_write_o <= '0';
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
             pc_write_o <= '1';
-            --i_or_d_o <= '0';
-            --mem_write_o <= '0';
-            --mem_data_reg_o <= '0';
-            --mem_to_reg_o <= '0';
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
             ir_write_o <= "1000";
       
 
@@ -211,18 +211,18 @@ begin
 
           when s_3 =>
 
-            --pc_source_o <= "00";
+            pc_source_o <= "00";
             alu_src_b_o <= "01";
-            --alu_src_a_o <= '0';
-            --alu_op_o <= "00";
-            --reg_write_o <= '0';
-            --reg_dest_o <= '0';
-            --pc_write_cond_o <= '0';
+            alu_src_a_o <= '0';
+            alu_op_o <= "00";
+            reg_write_o <= '0';
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
             pc_write_o <= '1';
-            --i_or_d_o <= '0';
-            --mem_write_o <= '0';
-            --mem_data_reg_o <= '0';
-            --mem_to_reg_o <= '0';
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
             ir_write_o <= "0100";
 
 
@@ -245,18 +245,18 @@ begin
 
          when s_5 =>
           
-            --pc_source_o <= "00";
+            pc_source_o <= "00";
             alu_src_b_o <= "01";
-            --alu_src_a_o <= '0';
-            --alu_op_o <= "00";
-            --reg_write_o <= '0';
-            --reg_dest_o <= '0';
-            --pc_write_cond_o <= '0';
+            alu_src_a_o <= '0';
+            alu_op_o <= "00";
+            reg_write_o <= '0';
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
             pc_write_o <= '1';
-            --i_or_d_o <= '0';
-            --mem_write_o <= '0';
-            --mem_data_reg_o <= '0';
-            --mem_to_reg_o <= '0';
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
             ir_write_o <= "0010";
 
 
@@ -279,208 +279,208 @@ begin
 
          when s_7 =>
           
-            --pc_source_o <= "00";
+            pc_source_o <= "00";
             alu_src_b_o <= "01";
-            --alu_src_a_o <= '0';
-            --alu_op_o <= "00";
-            --reg_write_o <= '0';
-            --reg_dest_o <= '0';
-            --pc_write_cond_o <= '0';
+            alu_src_a_o <= '0';
+            alu_op_o <= "00";
+            reg_write_o <= '0';
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
             pc_write_o <= '1';
-            --i_or_d_o <= '0';
-            --mem_write_o <= '0';
-            --mem_data_reg_o <= '0';
-            --mem_to_reg_o <= '0';
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
             ir_write_o <= "0001";
       
 
          when s_8 =>
           
-            --pc_source_o <= "00";
+            pc_source_o <= "00";
             alu_src_b_o <= "11";
-            --alu_src_a_o <= '0';
-            --alu_op_o <= "00";
-            --reg_write_o <= '0';
-            --reg_dest_o <= '0';
-            --pc_write_cond_o <= '0';
-            --pc_write_o <= '0';
-            --i_or_d_o <= '0';
-            --mem_write_o <= '0';
-            --mem_data_reg_o <= '0';
-            --mem_to_reg_o <= '0';
-            --ir_write_o <= "0000";
+            alu_src_a_o <= '0';
+            alu_op_o <= "00";
+            reg_write_o <= '0';
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
+            pc_write_o <= '0';
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
+            ir_write_o <= "0000";
 
 
           when s_9 =>
 
-            --pc_source_o <= "00";
+            pc_source_o <= "00";
             alu_src_b_o <= "10";
             alu_src_a_o <= '1';
-            --alu_op_o <= "00";
-            --reg_write_o <= '0';
-            --reg_dest_o <= '0';
-            --pc_write_cond_o <= '0';
-            --pc_write_o <= '0';
-            --i_or_d_o <= '0';
-            --mem_write_o <= '0';
-            --mem_data_reg_o <= '0';
-            --mem_to_reg_o <= '0';
-            --ir_write_o <= "0000";
+            alu_op_o <= "00";
+            reg_write_o <= '0';
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
+            pc_write_o <= '0';
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
+            ir_write_o <= "0000";
 
 
          when s_10 =>
           
-            --pc_source_o <= "00";
-            --alu_src_b_o <= "00";
-            --alu_src_a_o <= '0';
-            --alu_op_o <= "00";
-            --reg_write_o <= '0';
-            --reg_dest_o <= '0';
-            --pc_write_cond_o <= '0';
-            --pc_write_o <= '0';
+            pc_source_o <= "00";
+            alu_src_b_o <= "00";
+            alu_src_a_o <= '0';
+            alu_op_o <= "00";
+            reg_write_o <= '0';
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
+            pc_write_o <= '0';
             i_or_d_o <= '1';
-            --mem_write_o <= '0';
-            --mem_data_reg_o <= '0';
-            --mem_to_reg_o <= '0';
-            --ir_write_o <= "0000";
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
+            ir_write_o <= "0000";
       
 
          when s_11 =>
           
-            --pc_source_o <= "00";
-            --alu_src_b_o <= "00";
-            --alu_src_a_o <= '0';
-            --alu_op_o <= "00";
-            --reg_write_o <= '0';
-            --reg_dest_o <= '0';
-            --pc_write_cond_o <= '0';
-            --pc_write_o <= '0';
-            --i_or_d_o <= '0';
-            --mem_write_o <= '0';
+            pc_source_o <= "00";
+            alu_src_b_o <= "00";
+            alu_src_a_o <= '0';
+            alu_op_o <= "00";
+            reg_write_o <= '0';
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
+            pc_write_o <= '0';
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
             mem_data_reg_o <= '1';
-            --mem_to_reg_o <= '0';
-            --ir_write_o <= "0000";
+            mem_to_reg_o <= '0';
+            ir_write_o <= "0000";
 
 
 
           when s_12 =>
 
-            --pc_source_o <= "00";
-            --alu_src_b_o <= "00";
-            --alu_src_a_o <= '0';
-            --alu_op_o <= "00";
+            pc_source_o <= "00";
+            alu_src_b_o <= "00";
+            alu_src_a_o <= '0';
+            alu_op_o <= "00";
             reg_write_o <= '1';
-            --reg_dest_o <= '0';
-            --pc_write_cond_o <= '0';
-            --pc_write_o <= '0';
-            --i_or_d_o <= '0';
-            --mem_write_o <= '0';
-            --mem_data_reg_o <= '0';
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
+            pc_write_o <= '0';
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
             mem_to_reg_o <= '1';
-            --ir_write_o <= "0000";
+            ir_write_o <= "0000";
 
 
          when s_13 =>
           
-            --pc_source_o <= "00";
-            --alu_src_b_o <= "00";
-            --alu_src_a_o <= '0';
-            --alu_op_o <= "00";
-            --reg_write_o <= '0';
-            --reg_dest_o <= '0';
-            --pc_write_cond_o <= '0';
-            --pc_write_o <= '0';
+            pc_source_o <= "00";
+            alu_src_b_o <= "00";
+            alu_src_a_o <= '0';
+            alu_op_o <= "00";
+            reg_write_o <= '0';
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
+            pc_write_o <= '0';
             i_or_d_o <= '1';
             mem_write_o <= '1';
-            --mem_data_reg_o <= '0';
-            --mem_to_reg_o <= '0';
-            --ir_write_o <= "0000";
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
+            ir_write_o <= "0000";
       
 
          when s_14 =>
           
-            --pc_source_o <= "00";
-            --alu_src_b_o <= "00";
-            --alu_src_a_o <= '0';
-            --alu_op_o <= "00";
+            pc_source_o <= "00";
+            alu_src_b_o <= "00";
+            alu_src_a_o <= '0';
+            alu_op_o <= "00";
             reg_write_o <= '1';
-            --reg_dest_o <= '0';
-            --pc_write_cond_o <= '0';
-            --pc_write_o <= '0';
-            --i_or_d_o <= '0';
-            --mem_write_o <= '0';
-            --mem_data_reg_o <= '0';
-            --mem_to_reg_o <= '0';
-            --ir_write_o <= "0000";
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
+            pc_write_o <= '0';
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
+            ir_write_o <= "0000";
 
 
 
           when s_15 =>
 
             pc_source_o <= "01";
-            --alu_src_b_o <= "00";
+            alu_src_b_o <= "00";
             alu_src_a_o <= '1';
             alu_op_o <= "01";
-            --reg_write_o <= '0';
-            --reg_dest_o <= '0';
+            reg_write_o <= '0';
+            reg_dest_o <= '0';
             pc_write_cond_o <= '1';
-            --pc_write_o <= '0';
-            --i_or_d_o <= '0';
-            --mem_write_o <= '0';
-            --mem_data_reg_o <= '0';
-            --mem_to_reg_o <= '0';
-            --ir_write_o <= "0000";
+            pc_write_o <= '0';
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
+            ir_write_o <= "0000";
 
 
          when s_16 =>
           
-            --pc_source_o <= "00";
-            --alu_src_b_o <= "00";
+            pc_source_o <= "00";
+            alu_src_b_o <= "00";
             alu_src_a_o <= '1';
             alu_op_o <= "10";
-            --reg_write_o <= '0';
-            --reg_dest_o <= '0';
-            --pc_write_cond_o <= '0';
-            --pc_write_o <= '0';
-            --i_or_d_o <= '0';
-            --mem_write_o <= '0';
-            --mem_data_reg_o <= '0';
-            --mem_to_reg_o <= '0';
-            --ir_write_o <= "0000";
+            reg_write_o <= '0';
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
+            pc_write_o <= '0';
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
+            ir_write_o <= "0000";
       
 
          when s_17 =>
           
-            --pc_source_o <= "00";
-            --alu_src_b_o <= "00";
-            --alu_src_a_o <= '0';
-            --alu_op_o <= "00";
+            pc_source_o <= "00";
+            alu_src_b_o <= "00";
+            alu_src_a_o <= '0';
+            alu_op_o <= "00";
             reg_write_o <= '1';
             reg_dest_o <= '1';
-            --pc_write_cond_o <= '0';
-            --pc_write_o <= '0';
-            --i_or_d_o <= '0';
-            --mem_write_o <= '0';
-            --mem_data_reg_o <= '0';
-            --mem_to_reg_o <= '0';
-            --ir_write_o <= "0000";
+            pc_write_cond_o <= '0';
+            pc_write_o <= '0';
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
+            ir_write_o <= "0000";
 
 
           when s_18 =>
 
             pc_source_o <= "10";
-            --alu_src_b_o <= "00";
-            --alu_src_a_o <= '0';
-            --alu_op_o <= "00";
-            --reg_write_o <= '0';
-            --reg_dest_o <= '0';
-            --pc_write_cond_o <= '0';
+            alu_src_b_o <= "00";
+            alu_src_a_o <= '0';
+            alu_op_o <= "00";
+            reg_write_o <= '0';
+            reg_dest_o <= '0';
+            pc_write_cond_o <= '0';
             pc_write_o <= '1';
-            --i_or_d_o <= '0';
-            --mem_write_o <= '0';
-            --mem_data_reg_o <= '0';
-            --mem_to_reg_o <= '0';
-            --ir_write_o <= "0000";
+            i_or_d_o <= '0';
+            mem_write_o <= '0';
+            mem_data_reg_o <= '0';
+            mem_to_reg_o <= '0';
+            ir_write_o <= "0000";
    
 
           when others =>  

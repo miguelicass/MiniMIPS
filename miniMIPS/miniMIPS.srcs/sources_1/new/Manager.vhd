@@ -164,7 +164,7 @@ begin
                     data_m_in <= "11111101";
 
                 when number_254 =>
-                    data_m_in <= "11111101";
+                    data_m_in <= "11111110";
 
                 when number_255 =>
                     data_m_in <= "11111111";
