@@ -41,8 +41,6 @@ end InstructionResgister;
 
 architecture Behavioral of InstructionResgister is
 
-signal instruction : STD_LOGIC_VECTOR (31 downto 0);
-
 begin
 
 process(clk_i, rst_i)
@@ -50,16 +48,16 @@ process(clk_i, rst_i)
   begin
 
     if rst_i = '1' then 
-        instruction <= (others =>'0');
-        --instruction_o <= (others =>'0');
+        --instruction
+        instruction_o <= (others =>'0');
         
     elsif clk_i'event and clk_i = '1' and en_i = '1' then
        case ir_write_i is
        
-           when "0001" => instruction(7 downto 0)   <= byte_i;
-           when "0010" => instruction(15 downto 8)  <= byte_i; 
-           when "0100" => instruction(23 downto 16) <= byte_i;
-           when "1000" => instruction(31 downto 24) <= byte_i;
+           when "0001" => instruction_o(7 downto 0)   <= byte_i;
+           when "0010" => instruction_o(15 downto 8)  <= byte_i; 
+           when "0100" => instruction_o(23 downto 16) <= byte_i;
+           when "1000" => instruction_o(31 downto 24) <= byte_i;
            when others => null;
            
        end case;
@@ -68,6 +66,5 @@ process(clk_i, rst_i)
     
 end process;
 
-instruction_o <= instruction;
 
 end Behavioral;
