@@ -1,0 +1,571 @@
+
+*** Running vivado
+    with args -log Manager.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Manager.tcl
+
+
+****** Vivado v2019.2.1 (64-bit)
+  **** SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+  **** IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source Manager.tcl -notrace
+Command: synth_design -top Manager -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 27837 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1912.645 ; gain = 202.684 ; free physical = 116 ; free virtual = 1656
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Manager' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Manager.vhd:40]
+	Parameter N bound to: 1000000 - type: integer 
+INFO: [Synth 8-3491] module 'DivFreq' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/DivFreq.vhd:34' bound to instance 'Div_Freq_Mips' of component 'DivFreq' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Manager.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'DivFreq' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/DivFreq.vhd:40]
+	Parameter N bound to: 1000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DivFreq' (1#1) [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/DivFreq.vhd:40]
+INFO: [Synth 8-3491] module 'MIPS' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:34' bound to instance 'Mini_MIPS' of component 'MIPS' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Manager.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'MIPS' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:41]
+INFO: [Synth 8-3491] module 'ControlFSM' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ControlFSM.vhd:34' bound to instance 'my_Control_FSM' of component 'ControlFSM' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'ControlFSM' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ControlFSM.vhd:52]
+WARNING: [Synth 8-614] signal 'en_i' is read in the process but is not in the sensitivity list [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ControlFSM.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'ControlFSM' (2#1) [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ControlFSM.vhd:52]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'RegParallel' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd:34' bound to instance 'my_PC' of component 'RegParallel' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:179]
+INFO: [Synth 8-638] synthesizing module 'RegParallel' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd:41]
+	Parameter N bound to: 8 - type: integer 
+WARNING: [Synth 8-614] signal 'en_control_i' is read in the process but is not in the sensitivity list [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd:45]
+WARNING: [Synth 8-614] signal 'en_i' is read in the process but is not in the sensitivity list [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'RegParallel' (3#1) [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd:41]
+INFO: [Synth 8-3491] module 'Memory' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.runs/synth_1/.Xil/Vivado-27767-miguelan-VirtualBox/realtime/Memory_stub.vhdl:5' bound to instance 'my_Memory' of component 'Memory' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'Memory' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.runs/synth_1/.Xil/Vivado-27767-miguelan-VirtualBox/realtime/Memory_stub.vhdl:22]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'RegParallel' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd:34' bound to instance 'my_Memory_Data_Register' of component 'RegParallel' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:201]
+INFO: [Synth 8-3491] module 'InstructionResgister' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/InstructionRegister.vhd:34' bound to instance 'my_Instruction_Resgister' of component 'InstructionResgister' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:211]
+INFO: [Synth 8-638] synthesizing module 'InstructionResgister' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/InstructionRegister.vhd:42]
+WARNING: [Synth 8-614] signal 'en_i' is read in the process but is not in the sensitivity list [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/InstructionRegister.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'InstructionResgister' (4#1) [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/InstructionRegister.vhd:42]
+	Parameter N bound to: 5 - type: integer 
+	Parameter M bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'RegisterFile' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:34' bound to instance 'my_Register_File' of component 'RegisterFile' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:220]
+INFO: [Synth 8-638] synthesizing module 'RegisterFile' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:48]
+	Parameter N bound to: 5 - type: integer 
+	Parameter M bound to: 8 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:73]
+WARNING: [Synth 8-614] signal 'en_i' is read in the process but is not in the sensitivity list [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'RegisterFile' (5#1) [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:48]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'RegParallel' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd:34' bound to instance 'my_A' of component 'RegParallel' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:233]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'RegParallel' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd:34' bound to instance 'my_B' of component 'RegParallel' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:243]
+INFO: [Synth 8-3491] module 'ALUControl' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ALUControl.vhd:34' bound to instance 'my_ALU_Control' of component 'ALUControl' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:266]
+INFO: [Synth 8-638] synthesizing module 'ALUControl' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ALUControl.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'ALUControl' (6#1) [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ALUControl.vhd:41]
+INFO: [Synth 8-3491] module 'ALU' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ALU.vhd:33' bound to instance 'my_ALU' of component 'ALU' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:272]
+INFO: [Synth 8-638] synthesizing module 'ALU' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ALU.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (7#1) [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ALU.vhd:41]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'RegParallel' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd:34' bound to instance 'my_ALUOut' of component 'RegParallel' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:280]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'ShiftL2' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ShiftL2.vhd:34' bound to instance 'my_Shift_L_2' of component 'ShiftL2' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:288]
+INFO: [Synth 8-638] synthesizing module 'ShiftL2' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ShiftL2.vhd:39]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ShiftL2' (8#1) [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ShiftL2.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'MIPS' (9#1) [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:41]
+	Parameter N bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'DivFreq' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/DivFreq.vhd:34' bound to instance 'Div_Freq_Display' of component 'DivFreq' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Manager.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'DivFreq__parameterized1' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/DivFreq.vhd:40]
+	Parameter N bound to: 100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'DivFreq__parameterized1' (9#1) [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/DivFreq.vhd:40]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'Display7_Segmentos' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Display7_Segmentos.vhd:34' bound to instance 'Display' of component 'Display7_Segmentos' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Manager.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'Display7_Segmentos' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Display7_Segmentos.vhd:46]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Display7_Segmentos.vhd:60]
+WARNING: [Synth 8-614] signal 'init_token' is read in the process but is not in the sensitivity list [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Display7_Segmentos.vhd:81]
+WARNING: [Synth 8-614] signal 'en_i' is read in the process but is not in the sensitivity list [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Display7_Segmentos.vhd:81]
+WARNING: [Synth 8-614] signal 'byte_i' is read in the process but is not in the sensitivity list [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Display7_Segmentos.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'Display7_Segmentos' (10#1) [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Display7_Segmentos.vhd:46]
+INFO: [Synth 8-226] default block is never used [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Manager.vhd:118]
+WARNING: [Synth 8-614] signal 'en_display' is read in the process but is not in the sensitivity list [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Manager.vhd:111]
+INFO: [Synth 8-226] default block is never used [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Manager.vhd:147]
+INFO: [Synth 8-256] done synthesizing module 'Manager' (11#1) [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Manager.vhd:40]
+WARNING: [Synth 8-3331] design Display7_Segmentos has unconnected port byte_i[7]
+WARNING: [Synth 8-3331] design Display7_Segmentos has unconnected port byte_i[6]
+WARNING: [Synth 8-3331] design Display7_Segmentos has unconnected port byte_i[5]
+WARNING: [Synth 8-3331] design Display7_Segmentos has unconnected port byte_i[4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 1977.363 ; gain = 267.402 ; free physical = 174 ; free virtual = 1689
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:31 . Memory (MB): peak = 1977.363 ; gain = 267.402 ; free physical = 157 ; free virtual = 1679
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:31 . Memory (MB): peak = 1977.363 ; gain = 267.402 ; free physical = 157 ; free virtual = 1679
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1977.363 ; gain = 0.000 ; free physical = 146 ; free virtual = 1681
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/ip/Memory/Memory/Memory_in_context.xdc] for cell 'Mini_MIPS/my_Memory'
+Finished Parsing XDC File [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/ip/Memory/Memory/Memory_in_context.xdc] for cell 'Mini_MIPS/my_Memory'
+Parsing XDC File [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc]
+Finished Parsing XDC File [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/constrs_1/new/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Manager_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Manager_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2093.055 ; gain = 0.000 ; free physical = 69 ; free virtual = 1592
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2093.055 ; gain = 0.000 ; free physical = 66 ; free virtual = 1593
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'Mini_MIPS/my_Memory' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:49 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 129 ; free virtual = 1661
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:49 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 129 ; free virtual = 1662
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for Mini_MIPS/my_Memory. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:49 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 128 ; free virtual = 1662
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'ControlFSM'
+INFO: [Synth 8-5546] ROM "ir_write_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_to_reg_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_data_reg_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_write_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "i_or_d_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "pc_write_o" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "pc_write_cond_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_dest_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "reg_write_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "alu_op_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "alu_src_a_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "alu_src_b_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "pc_source_o" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "instruction_o" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ALU.vhd:51]
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'Manager'
+INFO: [Synth 8-5544] ROM "data_m_in" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "current_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     s_0 |              0000000000000000001 |                            00000
+                     s_1 |              0000000000000000010 |                            00001
+                     s_2 |              0000000000000000100 |                            00010
+                     s_3 |              0000000000000001000 |                            00011
+                     s_4 |              0000000000000010000 |                            00100
+                     s_5 |              0000000000000100000 |                            00101
+                     s_6 |              0000000000001000000 |                            00110
+                     s_7 |              0000000000010000000 |                            00111
+                     s_8 |              0000000000100000000 |                            01000
+                    s_18 |              0000000001000000000 |                            10010
+                    s_16 |              0000000010000000000 |                            10000
+                    s_17 |              0000000100000000000 |                            10001
+                    s_15 |              0000001000000000000 |                            01111
+                     s_9 |              0000010000000000000 |                            01001
+                    s_14 |              0000100000000000000 |                            01110
+                    s_13 |              0001000000000000000 |                            01101
+                    s_10 |              0010000000000000000 |                            01010
+                    s_11 |              0100000000000000000 |                            01011
+                    s_12 |              1000000000000000000 |                            01100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'ControlFSM'
+WARNING: [Synth 8-327] inferring latch for variable 'alu_control_o_reg' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/ALUControl.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'multiplex6_reg' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:183]
+WARNING: [Synth 8-327] inferring latch for variable 'multiplex5_reg' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:260]
+WARNING: [Synth 8-327] inferring latch for variable 'led_reg' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Display7_Segmentos.vhd:99]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              number_248 |                              000 |                              000
+              number_249 |                              001 |                              001
+              number_250 |                              010 |                              010
+              number_251 |                              011 |                              011
+              number_252 |                              100 |                              100
+              number_253 |                              101 |                              101
+              number_254 |                              110 |                              110
+              number_255 |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'Manager'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:52 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 116 ; free virtual = 1653
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 40    
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   6 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 1     
+	  19 Input     19 Bit        Muxes := 1     
+	   4 Input     19 Bit        Muxes := 1     
+	   3 Input     19 Bit        Muxes := 1     
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 7     
+	   2 Input      5 Bit        Muxes := 1     
+	   9 Input      3 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	  19 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 3     
+	  19 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 32    
+	   9 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Manager 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      3 Bit        Muxes := 1     
+Module DivFreq 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module ControlFSM 
+Detailed RTL Component Info : 
++---Muxes : 
+	  19 Input     19 Bit        Muxes := 1     
+	   4 Input     19 Bit        Muxes := 1     
+	   3 Input     19 Bit        Muxes := 1     
+	  19 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+	  19 Input      1 Bit        Muxes := 5     
+Module RegParallel 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module InstructionResgister 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   6 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 1     
+Module RegisterFile 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 34    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 32    
+Module ALUControl 
+Detailed RTL Component Info : 
++---Muxes : 
+	   9 Input      3 Bit        Muxes := 1     
+	   9 Input      1 Bit        Muxes := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module MIPS 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 7     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module DivFreq__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module Display7_Segmentos 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   9 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "Mini_MIPS/my_Control_FSM/" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mini_MIPS/my_Control_FSM/" won't be mapped to RAM because it is too sparse
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[7] with 1st driver pin 'Mini_MIPS/my_Register_File/reg_reg[0][7]/Q' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[7] with 2nd driver pin 'GND' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data0[7] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[6] with 1st driver pin 'Mini_MIPS/my_Register_File/reg_reg[0][6]/Q' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[6] with 2nd driver pin 'GND' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data0[6] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[5] with 1st driver pin 'Mini_MIPS/my_Register_File/reg_reg[0][5]/Q' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[5] with 2nd driver pin 'GND' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data0[5] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[4] with 1st driver pin 'Mini_MIPS/my_Register_File/reg_reg[0][4]/Q' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[4] with 2nd driver pin 'GND' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data0[4] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[3] with 1st driver pin 'Mini_MIPS/my_Register_File/reg_reg[0][3]/Q' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[3] with 2nd driver pin 'GND' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data0[3] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[2] with 1st driver pin 'Mini_MIPS/my_Register_File/reg_reg[0][2]/Q' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[2] with 2nd driver pin 'GND' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data0[2] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[1] with 1st driver pin 'Mini_MIPS/my_Register_File/reg_reg[0][1]/Q' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[1] with 2nd driver pin 'GND' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data0[1] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[0] with 1st driver pin 'Mini_MIPS/my_Register_File/reg_reg[0][0]/Q' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin data0[0] with 2nd driver pin 'GND' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net data0[0] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegisterFile.vhd:58]
+WARNING: [Synth 8-3332] Sequential element (Mini_MIPS/multiplex5_reg[7]) is unused and will be removed from module Manager.
+WARNING: [Synth 8-3332] Sequential element (Mini_MIPS/multiplex5_reg[6]) is unused and will be removed from module Manager.
+WARNING: [Synth 8-3332] Sequential element (Mini_MIPS/multiplex5_reg[5]) is unused and will be removed from module Manager.
+WARNING: [Synth 8-3332] Sequential element (Mini_MIPS/multiplex5_reg[4]) is unused and will be removed from module Manager.
+WARNING: [Synth 8-3332] Sequential element (Mini_MIPS/multiplex5_reg[3]) is unused and will be removed from module Manager.
+WARNING: [Synth 8-3332] Sequential element (Mini_MIPS/multiplex5_reg[2]) is unused and will be removed from module Manager.
+WARNING: [Synth 8-3332] Sequential element (Mini_MIPS/multiplex5_reg[1]) is unused and will be removed from module Manager.
+WARNING: [Synth 8-3332] Sequential element (Mini_MIPS/multiplex5_reg[0]) is unused and will be removed from module Manager.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:59 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 91 ; free virtual = 1638
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:01:16 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 71 ; free virtual = 1518
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:01:21 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 89 ; free virtual = 1498
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:01:22 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1497
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:01:29 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:01:29 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:01:30 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:01:30 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:01:30 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:01:30 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |Memory        |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |Memory_bbox_0 |     1|
+|2     |BUFG          |     1|
+|3     |CARRY4        |    19|
+|4     |LUT1          |     4|
+|5     |LUT2          |     6|
+|6     |LUT3          |    21|
+|7     |LUT4          |    35|
+|8     |LUT5          |   147|
+|9     |LUT6          |   199|
+|10    |MUXF7         |    16|
+|11    |FDCE          |   421|
+|12    |FDPE          |     8|
+|13    |LD            |    15|
+|14    |IBUF          |     2|
+|15    |OBUF          |    16|
++------+--------------+------+
+
+Report Instance Areas: 
++------+-----------------------------+------------------------+------+
+|      |Instance                     |Module                  |Cells |
++------+-----------------------------+------------------------+------+
+|1     |top                          |                        |   926|
+|2     |  Display                    |Display7_Segmentos      |    22|
+|3     |  Div_Freq_Display           |DivFreq__parameterized1 |    82|
+|4     |  Div_Freq_Mips              |DivFreq                 |    82|
+|5     |  Mini_MIPS                  |MIPS                    |   715|
+|6     |    my_ALU                   |ALU                     |     3|
+|7     |    my_A                     |RegParallel             |     8|
+|8     |    my_ALUOut                |RegParallel_0           |     8|
+|9     |    my_ALU_Control           |ALUControl              |    13|
+|10    |    my_B                     |RegParallel_1           |     8|
+|11    |    my_Control_FSM           |ControlFSM              |    97|
+|12    |    my_Instruction_Resgister |InstructionResgister    |    90|
+|13    |    my_Memory_Data_Register  |RegParallel_2           |    16|
+|14    |    my_PC                    |RegParallel_3           |     8|
+|15    |    my_Register_File         |RegisterFile            |   440|
++------+-----------------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:01:30 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 24 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:01:23 . Memory (MB): peak = 2093.055 ; gain = 267.402 ; free physical = 140 ; free virtual = 1552
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:01:30 . Memory (MB): peak = 2093.062 ; gain = 383.094 ; free physical = 139 ; free virtual = 1553
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2093.062 ; gain = 0.000 ; free physical = 75 ; free virtual = 1548
+INFO: [Netlist 29-17] Analyzing 50 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2096.023 ; gain = 0.000 ; free physical = 81 ; free virtual = 1568
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 15 instances were transformed.
+  LD => LDCE: 15 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+80 Infos, 26 Warnings, 24 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:48 . Memory (MB): peak = 2096.023 ; gain = 627.137 ; free physical = 221 ; free virtual = 1711
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2096.023 ; gain = 0.000 ; free physical = 220 ; free virtual = 1711
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.runs/synth_1/Manager.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Manager_utilization_synth.rpt -pb Manager_utilization_synth.pb
+source /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/utils_1/imports/.logs/SynthLogBackup.tcl
+ERROR: [runtcl-1] invalid command name "backupLog"
+ERROR: [Common 17-39] 'send_msg_id' failed due to earlier errors.
+
+    while executing
+"send_msg_id runtcl-1 error "$_RESULT""
+    invoked from within
+"if {$src_rc} { 
+  send_msg_id runtcl-1 error "$_RESULT"
+  send_msg_id runtcl-2 error "sourcing script /home/miguelan/Escritorio/MiniMIPS/miniMIPS/mini..."
+    (file "Manager.tcl" line 76)
+INFO: [Common 17-206] Exiting Vivado at Sun May 31 14:11:08 2020...
