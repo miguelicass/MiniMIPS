@@ -15,9 +15,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 27837 
+INFO: Helper process launched with PID 29879 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:25 . Memory (MB): peak = 1912.645 ; gain = 202.684 ; free physical = 116 ; free virtual = 1656
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 1904.574 ; gain = 202.684 ; free physical = 134 ; free virtual = 1387
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Manager' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/Manager.vhd:40]
 	Parameter N bound to: 1000000 - type: integer 
@@ -38,8 +38,8 @@ INFO: [Synth 8-638] synthesizing module 'RegParallel' [/home/miguelan/Escritorio
 WARNING: [Synth 8-614] signal 'en_control_i' is read in the process but is not in the sensitivity list [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd:45]
 WARNING: [Synth 8-614] signal 'en_i' is read in the process but is not in the sensitivity list [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd:45]
 INFO: [Synth 8-256] done synthesizing module 'RegParallel' (3#1) [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd:41]
-INFO: [Synth 8-3491] module 'Memory' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.runs/synth_1/.Xil/Vivado-27767-miguelan-VirtualBox/realtime/Memory_stub.vhdl:5' bound to instance 'my_Memory' of component 'Memory' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:188]
-INFO: [Synth 8-638] synthesizing module 'Memory' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.runs/synth_1/.Xil/Vivado-27767-miguelan-VirtualBox/realtime/Memory_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'Memory' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.runs/synth_1/.Xil/Vivado-29819-miguelan-VirtualBox/realtime/Memory_stub.vhdl:5' bound to instance 'my_Memory' of component 'Memory' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'Memory' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.runs/synth_1/.Xil/Vivado-29819-miguelan-VirtualBox/realtime/Memory_stub.vhdl:22]
 	Parameter N bound to: 8 - type: integer 
 INFO: [Synth 8-3491] module 'RegParallel' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/RegParallel.vhd:34' bound to instance 'my_Memory_Data_Register' of component 'RegParallel' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:201]
 INFO: [Synth 8-3491] module 'InstructionResgister' declared at '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/InstructionRegister.vhd:34' bound to instance 'my_Instruction_Resgister' of component 'InstructionResgister' [/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/sources_1/new/MIPS.vhd:211]
@@ -96,7 +96,7 @@ WARNING: [Synth 8-3331] design Display7_Segmentos has unconnected port byte_i[6]
 WARNING: [Synth 8-3331] design Display7_Segmentos has unconnected port byte_i[5]
 WARNING: [Synth 8-3331] design Display7_Segmentos has unconnected port byte_i[4]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 1977.363 ; gain = 267.402 ; free physical = 174 ; free virtual = 1689
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 1969.293 ; gain = 267.402 ; free physical = 169 ; free virtual = 1419
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -109,12 +109,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:31 . Memory (MB): peak = 1977.363 ; gain = 267.402 ; free physical = 157 ; free virtual = 1679
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:30 . Memory (MB): peak = 1969.293 ; gain = 267.402 ; free physical = 157 ; free virtual = 1414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:31 . Memory (MB): peak = 1977.363 ; gain = 267.402 ; free physical = 157 ; free virtual = 1679
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:30 . Memory (MB): peak = 1969.293 ; gain = 267.402 ; free physical = 157 ; free virtual = 1414
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1977.363 ; gain = 0.000 ; free physical = 146 ; free virtual = 1681
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1969.293 ; gain = 0.000 ; free physical = 134 ; free virtual = 1406
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -127,28 +127,28 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Manager_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2093.055 ; gain = 0.000 ; free physical = 69 ; free virtual = 1592
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2081.016 ; gain = 0.000 ; free physical = 68 ; free virtual = 1321
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2093.055 ; gain = 0.000 ; free physical = 66 ; free virtual = 1593
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2081.016 ; gain = 0.000 ; free physical = 65 ; free virtual = 1321
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'Mini_MIPS/my_Memory' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:49 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 129 ; free virtual = 1661
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:51 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 110 ; free virtual = 1388
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:49 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 129 ; free virtual = 1662
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:51 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 110 ; free virtual = 1388
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for Mini_MIPS/my_Memory. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:49 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 128 ; free virtual = 1662
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:51 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 109 ; free virtual = 1388
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'ControlFSM'
 INFO: [Synth 8-5546] ROM "ir_write_o" won't be mapped to RAM because it is too sparse
@@ -211,7 +211,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'led_reg' [/home/miguelan/Es
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'Manager'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:52 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 116 ; free virtual = 1653
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:54 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 92 ; free virtual = 1378
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -380,7 +380,7 @@ WARNING: [Synth 8-3332] Sequential element (Mini_MIPS/multiplex5_reg[2]) is unus
 WARNING: [Synth 8-3332] Sequential element (Mini_MIPS/multiplex5_reg[1]) is unused and will be removed from module Manager.
 WARNING: [Synth 8-3332] Sequential element (Mini_MIPS/multiplex5_reg[0]) is unused and will be removed from module Manager.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:59 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 91 ; free virtual = 1638
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:01:01 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 96 ; free virtual = 1363
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -392,13 +392,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:01:16 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 71 ; free virtual = 1518
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:01:18 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 73 ; free virtual = 1244
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:01:21 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 89 ; free virtual = 1498
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:01:22 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 84 ; free virtual = 1226
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -410,7 +410,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:01:22 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1497
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:01:23 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 79 ; free virtual = 1224
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -434,13 +434,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:01:29 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:01:32 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 76 ; free virtual = 1225
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:01:29 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:01:32 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 76 ; free virtual = 1225
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -459,25 +459,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:01:30 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:01:32 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 75 ; free virtual = 1225
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:01:30 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:01:32 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 75 ; free virtual = 1225
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:01:30 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:01:32 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 75 ; free virtual = 1225
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:01:30 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:01:32 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 75 ; free virtual = 1225
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -532,18 +532,18 @@ Report Instance Areas:
 |15    |    my_Register_File         |RegisterFile            |   440|
 +------+-----------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:01:30 . Memory (MB): peak = 2093.055 ; gain = 383.094 ; free physical = 87 ; free virtual = 1498
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:01:32 . Memory (MB): peak = 2083.984 ; gain = 382.094 ; free physical = 75 ; free virtual = 1225
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 24 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:01:23 . Memory (MB): peak = 2093.055 ; gain = 267.402 ; free physical = 140 ; free virtual = 1552
-Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:01:30 . Memory (MB): peak = 2093.062 ; gain = 383.094 ; free physical = 139 ; free virtual = 1553
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:01:25 . Memory (MB): peak = 2083.984 ; gain = 267.402 ; free physical = 128 ; free virtual = 1279
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:01:32 . Memory (MB): peak = 2083.992 ; gain = 382.094 ; free physical = 126 ; free virtual = 1280
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2093.062 ; gain = 0.000 ; free physical = 75 ; free virtual = 1548
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2083.992 ; gain = 0.000 ; free physical = 86 ; free virtual = 1274
 INFO: [Netlist 29-17] Analyzing 50 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2096.023 ; gain = 0.000 ; free physical = 81 ; free virtual = 1568
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2086.953 ; gain = 0.000 ; free physical = 63 ; free virtual = 1299
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 15 instances were transformed.
   LD => LDCE: 15 instances
@@ -551,21 +551,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 80 Infos, 26 Warnings, 24 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:48 . Memory (MB): peak = 2096.023 ; gain = 627.137 ; free physical = 221 ; free virtual = 1711
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2096.023 ; gain = 0.000 ; free physical = 220 ; free virtual = 1711
+synth_design: Time (s): cpu = 00:01:07 ; elapsed = 00:01:52 . Memory (MB): peak = 2086.953 ; gain = 626.137 ; free physical = 204 ; free virtual = 1442
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2086.953 ; gain = 0.000 ; free physical = 202 ; free virtual = 1442
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.runs/synth_1/Manager.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Manager_utilization_synth.rpt -pb Manager_utilization_synth.pb
-source /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/utils_1/imports/.logs/SynthLogBackup.tcl
-ERROR: [runtcl-1] invalid command name "backupLog"
-ERROR: [Common 17-39] 'send_msg_id' failed due to earlier errors.
-
-    while executing
-"send_msg_id runtcl-1 error "$_RESULT""
-    invoked from within
-"if {$src_rc} { 
-  send_msg_id runtcl-1 error "$_RESULT"
-  send_msg_id runtcl-2 error "sourcing script /home/miguelan/Escritorio/MiniMIPS/miniMIPS/mini..."
-    (file "Manager.tcl" line 76)
-INFO: [Common 17-206] Exiting Vivado at Sun May 31 14:11:08 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun May 31 14:38:55 2020...

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1590926916">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1590928585">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="Manager.drc"/>
   <File Type="BG-BGN" Name="Manager.bgn"/>
@@ -29,52 +29,52 @@
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Manager_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Manager_postroute_physopt.dcp"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="Manager_bus_skew_routed.rpx"/>
-  <File Type="INIT-TIMING" Name="Manager_timing_summary_init.rpt"/>
-  <File Type="OPT-DCP" Name="Manager_opt.dcp"/>
-  <File Type="OPT-DRC" Name="Manager_drc_opted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="Manager_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="Manager_methodology_drc_opted.rpt"/>
-  <File Type="PLACE-UTIL" Name="Manager_utilization_placed.rpt"/>
-  <File Type="OPT-HWDEF" Name="Manager.hwdef"/>
-  <File Type="PHYSOPT-TIMING" Name="Manager_timing_summary_physopted.rpt"/>
-  <File Type="PA-TCL" Name="Manager.tcl"/>
-  <File Type="OPT-TIMING" Name="Manager_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="Manager_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="Manager_drc_pwropted.rpt"/>
-  <File Type="REPORTS-TCL" Name="Manager_reports.tcl"/>
-  <File Type="PWROPT-TIMING" Name="Manager_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="Manager_placed.dcp"/>
-  <File Type="PLACE-IO" Name="Manager_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="Manager_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="Manager_utilization_placed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="Manager_methodology_drc_routed.rpt"/>
-  <File Type="PLACE-CTRL" Name="Manager_control_sets_placed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Manager_methodology_drc_routed.pb"/>
-  <File Type="PLACE-SIMILARITY" Name="Manager_incremental_reuse_placed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="Manager_drc_routed.rpx"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="Manager_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Manager_methodology_drc_routed.rpx"/>
-  <File Type="PLACE-TIMING" Name="Manager_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="Manager_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="Manager_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="Manager_drc_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="Manager_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="Manager_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="Manager_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="Manager_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="Manager_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="Manager_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="Manager_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="Manager_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="Manager_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="Manager_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="Manager_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="Manager_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="Manager_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="Manager_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="Manager_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="Manager_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="Manager_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Manager_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Manager_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="Manager_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Manager_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="Manager_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Manager_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Manager_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="Manager_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="Manager_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="Manager_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="Manager_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Manager_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Manager_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Manager_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="Manager_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="Manager_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="Manager_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Manager_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="Manager_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Manager_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="Manager_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="Manager_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Manager_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Manager_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Manager_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="Manager_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Manager_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Manager_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="Manager_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Manager_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="Manager_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Manager_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="Manager_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="Manager_placed.dcp"/>
+  <File Type="PWROPT-DRC" Name="Manager_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="Manager_pwropt.dcp"/>
+  <File Type="OPT-HWDEF" Name="Manager.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Manager_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="Manager_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Manager_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="Manager_timing_summary_init.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Manager_timing_summary_pwropted.rpt"/>
+  <File Type="REPORTS-TCL" Name="Manager_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="Manager_timing_summary_opted.rpt"/>
+  <File Type="PA-TCL" Name="Manager.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ALU.vhd">
@@ -173,16 +173,18 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
     <Step Id="place_design"/>
     <Step Id="post_place_power_opt_design"/>
     <Step Id="phys_opt_design" EnableStepBool="1"/>
-    <Step Id="route_design" PostStepTclHook="$PSRCDIR/utils_1/imports/.logs/ImplLogBackup.tcl"/>
+    <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
-    <Step Id="write_bitstream" PostStepTclHook="$PSRCDIR/utils_1/imports/.logs/BitsLogBackup.tcl"/>
+    <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="Memory"/>
 </GenRun>

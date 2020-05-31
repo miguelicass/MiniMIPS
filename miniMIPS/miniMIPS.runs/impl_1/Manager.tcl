@@ -147,15 +147,6 @@ set ACTIVE_STEP route_design
 set rc [catch {
   create_msg_db route_design.pb
   route_design 
-  set src_rc [catch { 
-    puts "source /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/utils_1/imports/.logs/ImplLogBackup.tcl"
-    source /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/utils_1/imports/.logs/ImplLogBackup.tcl
-  } _RESULT] 
-  if {$src_rc} { 
-    send_msg_id runtcl-1 error "$_RESULT"
-    send_msg_id runtcl-2 error "sourcing script /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/utils_1/imports/.logs/ImplLogBackup.tcl failed"
-    return -code error
-  }
   write_checkpoint -force Manager_routed.dcp
   create_report "impl_1_route_report_drc_0" "report_drc -file Manager_drc_routed.rpt -pb Manager_drc_routed.pb -rpx Manager_drc_routed.rpx"
   create_report "impl_1_route_report_methodology_0" "report_methodology -file Manager_methodology_drc_routed.rpt -pb Manager_methodology_drc_routed.pb -rpx Manager_methodology_drc_routed.rpx"
@@ -183,15 +174,6 @@ set rc [catch {
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   catch { write_mem_info -force Manager.mmi }
   write_bitstream -force Manager.bit 
-  set src_rc [catch { 
-    puts "source /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/utils_1/imports/.logs/BitsLogBackup.tcl"
-    source /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/utils_1/imports/.logs/BitsLogBackup.tcl
-  } _RESULT] 
-  if {$src_rc} { 
-    send_msg_id runtcl-1 error "$_RESULT"
-    send_msg_id runtcl-2 error "sourcing script /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/utils_1/imports/.logs/BitsLogBackup.tcl failed"
-    return -code error
-  }
   catch {write_debug_probes -quiet -force Manager}
   catch {file copy -force Manager.ltx debug_nets.ltx}
   close_msg_db -file write_bitstream.pb

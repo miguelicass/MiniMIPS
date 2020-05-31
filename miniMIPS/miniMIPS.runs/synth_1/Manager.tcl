@@ -69,14 +69,5 @@ synth_design -top Manager -part xc7a100tcsg324-1
 set_param constraints.enableBinaryConstraints false
 write_checkpoint -force -noxdef Manager.dcp
 create_report "synth_1_synth_report_utilization_0" "report_utilization -file Manager_utilization_synth.rpt -pb Manager_utilization_synth.pb"
-set src_rc [catch { 
-  puts "source /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/utils_1/imports/.logs/SynthLogBackup.tcl"
-  source /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/utils_1/imports/.logs/SynthLogBackup.tcl
-} _RESULT] 
-if {$src_rc} { 
-  send_msg_id runtcl-1 error "$_RESULT"
-  send_msg_id runtcl-2 error "sourcing script /home/miguelan/Escritorio/MiniMIPS/miniMIPS/miniMIPS.srcs/utils_1/imports/.logs/SynthLogBackup.tcl failed"
-  return -code error
-}
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
